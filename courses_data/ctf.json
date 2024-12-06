@@ -1,0 +1,17 @@
+{
+    "name": "CTF",
+    "slug": "ctf",
+    "description": "Задания в формате Capture The Flag.",
+    "tasks": [
+        {
+            "id": 7,
+            "question": "Задание 1 для CTF",
+            "flag": "iuwo{flag1}"
+        },
+        {
+            "id": 8,
+            "question": "Задание 2 для CTF",
+            "flag": "iuwo{flag2}"
+        }
+    ]
+}

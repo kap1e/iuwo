@@ -1,0 +1,17 @@
+{
+    "name": "OSINT",
+    "slug": "osint",
+    "description": "Работаем с открытыми источниками.",
+    "tasks": [
+        {
+            "id": 3,
+            "question": "Задание 1 для OSINT",
+            "flag": "iuwo{flag1}"
+        },
+        {
+            "id": 4,
+            "question": "Задание 2 для OSINT",
+            "flag": "iuwo{flag2}"
+        }
+    ]
+}

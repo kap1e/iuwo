@@ -1,0 +1,17 @@
+{
+    "name": "Форензика",
+    "slug": "forensics",
+    "description": "Найти всё, что скрыто.",
+    "tasks": [
+        {
+            "id": 5,
+            "question": "Задание 1 для Форензика",
+            "flag": "iuwo{flag1}"
+        },
+        {
+            "id": 6,
+            "question": "Задание 2 для Форензика",
+            "flag": "iuwo{flag2}"
+        }
+    ]
+}

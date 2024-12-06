@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Главная{% endblock %}
+{% block content %}
+<h1>Добро пожаловать на платформу курсов по информационной безопасности!</h1>
+<div class="courses">
+    {% for course in courses %}
+    <div class="course-card">
+        <h2><a href="{{ url_for('course', course_name=course.name, section='history') }}">{{ course.name }}</a></h2>
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress" style="width: {{ course.progress }}%;"></div>
+            </div>
+            <span class="progress-value">{{ course.progress }}%</span>
+        </div>
+        <p>{{ course.description }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends 'course_base.html' %}
+{% block title %}{{ course_name }} - {{ section_title }}{% endblock %}
+{% block section_content %}
+<div class="course-content">
+    {{ content|safe }}
+</div>
+{% endblock %}

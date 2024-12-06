@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{ course_name }}</h1>
+
+<!-- Навигация между разделами -->
+<div class="section-navigation">
+    {% if prev_section %}
+        <a href="{{ url_for('course', course_name=course_name, section=prev_section) }}">&larr; Назад</a>
+    {% endif %}
+    {% if next_section %}
+        <a href="{{ url_for('course', course_name=course_name, section=next_section) }}">Вперёд &rarr;</a>
+    {% endif %}
+</div>
+
+<!-- Основной контент раздела -->
+{% block section_content %}{% endblock %}
+
+<!-- Навигация между разделами (повторяем внизу) -->
+<div class="section-navigation">
+    {% if prev_section %}
+        <a href="{{ url_for('course', course_name=course_name, section=prev_section) }}">&larr; Назад</a>
+    {% endif %}
+    {% if next_section %}
+        <a href="{{ url_for('course', course_name=course_name, section=next_section) }}">Вперёд &rarr;</a>
+    {% endif %}
+</div>
+
+{% endblock %}

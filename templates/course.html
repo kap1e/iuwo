@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}{{ course_name }}{% endblock %}
+{% block content %}
+<h1>{{ course_name }}</h1>
+
+<h2>История</h2>
+<p>{{ history }}</p>
+
+<h2>Нынешнее применение</h2>
+<p>{{ current_usage }}</p>
+
+<h2>Практика</h2>
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="flash">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+{% for task in tasks %}
+    <div class="task">
+        <p><strong>{{ task.question }}</strong></p>
+        {% if task.id in completed_tasks %}
+            <p>Задание выполнено!</p>
+        {% else %}
+            <form method="POST">
+                <input type="hidden" name="task_id" value="{{ task.id }}">
+                <label for="flag">Введите флаг (формат iuwo{...}):</label>
+                <input type="text" name="flag" required>
+                <button type="submit">Отправить</button>
+            </form>
+        {% endif %}
+    </div>
+    <hr>
+{% endfor %}
+
+{% endblock %}
